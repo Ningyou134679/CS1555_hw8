@@ -23,4 +23,12 @@ when maintainer in (select ssn from worker where name = 'Jason')
 then (select ssn from worker where name = 'Mike')
 else maintainer
 end;
+
+
+--(c)
+insert into worker 
+values ('555555555','Paula',22,1);
+update sensor set maintainer = '555555555' 
+where sensor_id = 1;
+
 commit;
